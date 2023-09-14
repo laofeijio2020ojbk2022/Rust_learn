@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>import maps • three.js</title>
+    
+    <!-- An import map allows references to 'three' in ES Module imports 
+         throughout the webpage to be automatically directed to the CDN
+         URLs specified below. Because most browsers do not yet support
+         these maps natively, a shim script is provided and a '-shim'
+         suffix added to script elements' type attributes. -->
+    <script defer src="https://unpkg.com/es-module-shims@0.4.6/dist/es-module-shims.js"></script>
+    <script type="importmap-shim">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.118.1/build/three.module.js",
+        "three/examples/jsm/": "https://unpkg.com/three@0.118.1/examples/jsm/"
+      }
+    }
+    </script>
+  </head>  
+  <body>
+    <div id="container"></div>
+    
+    <script type="module-shim">
+      // Each import is mapped automatically to the CDNs specified above,
+      // while using the same 'three' namespace as a bundled application.
+      import { Scene, Camera, PerspectiveCamera, WebGLRenderer } from 'three';
+      import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+      import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+      
+      // Core.
+      const scene = new Scene();
+      const camera = new PerspectiveCamera();
+      const renderer = new WebGLRenderer();
+      
+      // Examples.
+      const controls = new OrbitControls( camera, renderer.domElement );
+      const loader = new GLTFLoader();
+      
+      console.log( 'Import maps supported: ✅' );
+    </script>
+  </body>
+</html>
