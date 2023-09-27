@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken</title>
+    <link rel="stylesheet" href="chicken.css">
+</head>
+<body>
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "../../../three.js-r96/build/three.module.js",
+            "three/addons/": "./node_modules/three/examples/jsm/"
+            "tweenjs": "../../../tweenjs.js"
+        }
+        }
+    </script>
+
+    <script src="./chicken.js" type="module"></script>
+
+    <div id="world"></div>
+    <div id="instructions">^<br/>Move the head of this bird<br/><span class="lightInstructions">and watch how the 2 others<br/>interact with him</span></div>
+
+    <div id="credits">
+    <p> <a href="https://codepen.io/Yakudoo/"  target="blank">my other codepens</a> | <a href="https://www.epic.net" target="blank">epic.net</a></p>
+    </div>
+</body>
+</html>
