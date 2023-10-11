@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPMS</title>
+    <script src="https://threejs.org/build/three.js"></script>
+    
+</head>
+<body>
+    <script>
+        let scene, camera, renderer;
+        let mesh;
+        const SIZE = 50;
+        const STEPS = 128;
+
+        function init() {
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xffffff);
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 100;
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            var geometry = new THREE.BufferGeometry();
+            var vertices = [];
+            for (let x = -SIZE/2; x < SIZE/2; x += SIZE / STEPS) {
+                for (let y = -SIZE/2; y < SIZE/2; y += SIZE / STEPS) {
+                    for (let z = -SIZE/2; z < SIZE/2; z += SIZE / STEPS) {
+                        if (gyroidFunction(x, y, z) < 0) {
+                            // Add the point to the vertices list if it's inside the Gyroid volume.
+                            vertices.push(x, y, z);
+                        }
+                    }
+                }
+            }
+            console.log(vertices);
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+            const material = new THREE.PointsMaterial({color: 0x0000ff, size: 0.5, opacity:0.5, transparent: true});
+            mesh = new THREE.Points(geometry, material);
+            scene.add(mesh);
+
+            animate();
+        }
+
+        function gyroidFunction(x, y, z) {
+            const C = 0; // You can adjust this constant.
+            return Math.sin(x) * Math.cos(y) + Math.sin(y) * Math.cos(z) + Math.sin(z) * Math.cos(x) - C;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            mesh.rotation.x += 0.01;
+            mesh.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        window.addEventListener('resize', () => {
+            const newWidth = window.innerWidth;
+            const newHeight = window.innerHeight;
+            camera.aspect = newWidth / newHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(newWidth, newHeight);
+        });
+
+        init();
+    </script>
+</body>
+</html>

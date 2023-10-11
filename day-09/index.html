@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test3D</title>
+		<style>
+			body { 
+                margin: 0; 
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            canvas { 
+                width: 100%; 
+                height: 100%;
+            }   
+		</style>
+	</head>
+	<body>
+        <script type="importmap">
+            {
+            "imports": {
+                "three": "https://threejs.org/build/three.module.js",
+				"three/addons/": "./node_modules/three/examples/jsm/"
+            }
+            }
+        </script>
+
+		<script type="module">
+			import * as THREE from 'three';
+			import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+
+            var geometry = new THREE.BufferGeometry();
+            var vertices = [];
+            const SIZE = 50;
+            const STEPS = 128;
+            var C = { value: 0 }; // 将属性包装在对象中
+
+            function gyroidFunction(x, y, z) {
+                return Math.sin(x) * Math.cos(y) + Math.sin(y) * Math.cos(z) + Math.sin(z) * Math.cos(x) - C.value;
+            }
+
+            for (let x = -SIZE/2; x < SIZE/2; x += SIZE / STEPS) {
+                for (let y = -SIZE/2; y < SIZE/2; y += SIZE / STEPS) {
+                    for (let z = -SIZE/2; z < SIZE/2; z += SIZE / STEPS) {
+                        if (gyroidFunction(x, y, z) < 0) {
+                            // Add the point to the vertices list if it's inside the Gyroid volume.
+                            vertices.push(x, y, z);
+                        }
+                    }
+                }
+            }
+            console.log(vertices);
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+//                var material = new THREE.MeshPhysicalMaterial( { color: 0xfd59d7 } );
+            var material = new THREE.PointsMaterial({color: 0x00ff00, size: 0.5, opacity:0.5, transparent: true});
+            var cube = new THREE.Points( geometry, material );
+            scene.add( cube );
+
+            camera.position.z = 100;
+
+            var light = new THREE.DirectionalLight(0xffff00); // 添加一个平行光源
+            light.position.set(0,0, 100); // 设置光源位置
+            scene.add(light);
+
+            function animate() {
+                requestAnimationFrame( animate );
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                camera.updateProjectionMatrix();
+
+                renderer.render( scene, camera );
+            }
+
+            animate();
+
+            // dat gui
+            var gui = new GUI();
+            var cameraGui = gui.addFolder("camera position");
+            cameraGui.add(camera.position, 'x');
+            cameraGui.add(camera.position, 'y');
+            cameraGui.add(camera.position, 'z');
+            cameraGui.open();
+
+            var cameraGui = gui.addFolder("camera projection");
+            cameraGui.add(camera, "fov");
+            cameraGui.open();
+
+            var lightGui = gui.addFolder("light position");
+            lightGui.add(light.position, 'x');
+            lightGui.add(light.position, 'y');
+            lightGui.add(light.position, 'z');
+            lightGui.open();
+
+            var cubeGui = gui.addFolder("cube position");
+            cubeGui.add(cube.position, 'x');
+            cubeGui.add(cube.position, 'y');
+            cubeGui.add(cube.position, 'z');
+            cubeGui.open();
+
+            // 创建一个 GUI 文件夹
+            var CGui = gui.addFolder("hole value");
+            // 将 C 属性添加到 GUI 中
+            CGui.add(C, 'value').onChange(function(newValue) {
+            updateCubeGeometry(newValue);
+            });
+            CGui.open();
+
+            // 更新cube geometry的函数
+            function updateCubeGeometry(C) {
+            var vertices = [];
+
+            for (let x = -SIZE/2; x < SIZE/2; x += SIZE / STEPS) {
+                for (let y = -SIZE/2; y < SIZE/2; y += SIZE / STEPS) {
+                for (let z = -SIZE/2; z < SIZE/2; z += SIZE / STEPS) {
+                    if (gyroidFunction(x, y, z) < C) {
+                    // 添加符合条件的点到vertices数组中
+                    vertices.push(x, y, z);
+                    }
+                }
+                }
+            }
+
+            // 更新cube geometry的position属性
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+            geometry.computeBoundingSphere(); // 更新包围球半径
+            }
+
+		</script>
+	</body>
+</html>
