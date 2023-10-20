@@ -1,0 +1,10 @@
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\libidna-1355376c7994f4a2.rmeta: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\punycode.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46_mapping_table.rs
+
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\libidna-1355376c7994f4a2.rlib: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\punycode.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46_mapping_table.rs
+
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\idna-1355376c7994f4a2.d: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\punycode.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46_mapping_table.rs
+
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\punycode.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\idna-0.1.5\src\uts46_mapping_table.rs:

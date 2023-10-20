@@ -1,0 +1,10 @@
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\libversion_check-0cc53013ab8a8978.rmeta: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\version.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\channel.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\date.rs
+
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\libversion_check-0cc53013ab8a8978.rlib: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\version.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\channel.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\date.rs
+
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\version_check-0cc53013ab8a8978.d: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\version.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\channel.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\date.rs
+
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\version.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\channel.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\version_check-0.9.4\src\date.rs:

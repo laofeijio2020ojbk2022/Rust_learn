@@ -1,0 +1,10 @@
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\libproc_macro2-f7493420dadba290.rmeta: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\strnom.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\fallback.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\wrapper.rs
+
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\libproc_macro2-f7493420dadba290.rlib: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\strnom.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\fallback.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\wrapper.rs
+
+E:\Rust WorkSpace\Rust_learn\day-10\hello-rocket\target\debug\deps\proc_macro2-f7493420dadba290.d: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\strnom.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\fallback.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\wrapper.rs
+
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\strnom.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\fallback.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-12df342d903acd47\proc-macro2-0.4.30\src\wrapper.rs:
